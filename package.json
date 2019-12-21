@@ -7,8 +7,7 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot --open",
     "stag": "cross-env NODE_ENV=development webpack",
     "build": "cross-env NODE_ENV=production webpack",
-    "test": "jest --watchAll --coverage",
-    "precommit": "lint-staged"
+    "test": "jest --watchAll --coverage"
   },
   "keywords": [],
   "author": "",
