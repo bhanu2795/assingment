@@ -6,6 +6,7 @@ $break-large: 1600px;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+	position: relative;
 
 	.login_container {
 		width: 100%;
@@ -34,88 +35,56 @@ $break-large: 1600px;
 				display: flex;
 				justify-content: space-evenly;
 
-				.item {
-					display: inline-block;
+				.wrapper {
 					position: relative;
-					width: 200px;
-					height: 200px;
-					overflow: hidden;
-					border-radius: 50%;
-					border: 5px solid #bbb7b7;
-					margin: 0 2rem;
 
-					// .zoomOut {
-					// 	width: auto;
-					// 	height: 100%;
-					// 	cursor: pointer;
-					// 	margin-left: -50px;
-					// }
-				}
+					.item {
+						display: inline-block;
+						position: relative;
+						width: 200px;
+						height: 200px;
+						overflow: hidden;
+						border-radius: 50%;
+						border: 5px solid #bbb7b7;
+						margin: 0 2rem;
+						-webkit-transition: transform 0.6s ease-in-out;
+						-moz-transition: transform 0.6s ease-in-out;
+						-o-transition: transform 0.6s ease-in-out;
+						transition: transform 0.6s ease-in-out;
+						
+						.animationImage {
+							width: auto;
+							height: 100%;
+							cursor: pointer;
+							margin-left: -50px;
+						}
+					}
+					
+					.test {
+						position: absolute;
+						margin: 0 2rem;
+						width: 200px;
+						height: 200px;
+						border: 5px solid #bbb7b7;
+						overflow: hidden;
+						border-radius: 50%;
+						right: 0;
+						left: 0;
+						top: 0;
+						z-index: 1;
+						-webkit-transition: transform 0.6s ease-in-out;
+						-moz-transition: transform 0.6s ease-in-out;
+						-o-transition: transform 0.6s ease-in-out;
+						transition: transform 0.6s ease-in-out;
+						bottom: 0;
 
-
-			}
-
-			.modal {
-				display: none;
-				position: fixed;
-				z-index: 1;
-				padding-top: 100px;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				overflow: auto;
-				background-color: rgb(0, 0, 0);
-				background-color: rgba(0, 0, 0, 0.9);
-
-				.modalContent {
-					margin: auto;
-					display: block;
-					width: 75%;
-					//max-width: 75%;
-                }
-                
-                .modalContent, #caption {
-                    -webkit-animation-name: zoom;
-                    -webkit-animation-duration: 0.6s;
-                    animation-name: zoom;
-                    animation-duration: 0.6s;
-                }
-
-				.out {
-					animation-name: zoom-out;
-					animation-duration: 0.6s;
-				}
-
-			}
-
-			@-webkit-keyframes zoom {
-				from {
-					-webkit-transform: scale(1)
-				}
-
-				to {
-					-webkit-transform: scale(2)
-				}
-			}
-
-			@keyframes zoom {
-				from {
-					transform: scale(0.4)
-				}
-
-				to {
-					transform: scale(1)
-				}
-			}
-
-			@keyframes zoom-out {
-				from {
-					transform: scale(1)
-				}
-
-				to {
-					transform: scale(0)
+						.animationImage {
+							width: auto;
+							height: 100%;
+							cursor: pointer;
+							margin-left: -50px;
+						}
+					}
 				}
 			}
 		}
